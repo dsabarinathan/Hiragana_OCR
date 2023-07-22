@@ -13,7 +13,7 @@
 https://github.com/dsabarinathan/Hiragana_OCR/
 ```
 
-- Step 2: Move the config file , get_coordinate and hiragana_ocr_engine file to Docker folder. 
+- Step 2: Move the config file , get_coordinate and hiragana_ocr_engine file ,models folder to Docker folder. 
 
 
 - Step 3: Use the below command for docker compose.
