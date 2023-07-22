@@ -20,11 +20,15 @@ RUN pip install flask
 RUN pip install requests
 RUN pip install numpy
 RUN pip install tensorflow-addons
-RUN pip install dlib
+RUN pip install scikit-image
 
-COPY ./models/model_inception_facial_keypoints.h5 /app/models/model_inception_facial_keypoints.h5
+COPY ./models/model-ocr-0.1829.h5 /app/models/model-ocr-0.1829.h5
 
-COPY facialAttributeRecognition.py /app/facialAttributeRecognition.py
+COPY config.json /app/config.json
 
-CMD ["python", "/app/facialAttributeRecognition.py"]
+COPY get_coordinate.py /app/get_coordinate.py
+
+COPY hiragana_ocr_engine.py /app/hiragana_ocr_engine.py
+
+CMD ["python", "/app/hiragana_ocr_engine.py"]
 
