@@ -1,0 +1,6 @@
+opencv-python
+tensorflow==2.7.0
+numpy
+flask
+
+
