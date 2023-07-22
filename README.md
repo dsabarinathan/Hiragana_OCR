@@ -1,7 +1,7 @@
 # Hiragana_OCR
 
 
-
+This GitHub branch contains the Hiragana OCR module, which is a crucial component of our larger Japanese Character Recognition project. The main objective of this branch is to accurately recognize and convert handwritten or printed Hiragana characters into digital text format. 
 
 
 # Running the model in Docker
