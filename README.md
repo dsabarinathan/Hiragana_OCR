@@ -1,7 +1,9 @@
-![image](https://github.com/dsabarinathan/Hiragana_OCR/assets/40907627/823fce66-fab0-412a-b8af-6c3c6bcb912a)# Hiragana_OCR
+# Hiragana_OCR
 
 
 This GitHub branch contains the Hiragana OCR module, which is a crucial component of our larger Japanese Character Recognition project. The main objective of this branch is to accurately recognize and convert handwritten or printed Hiragana characters into digital text format. 
+# Dataset:
+[Kuzushiji-49](https://github.com/rois-codh/kmnist) is an MNIST-like dataset that has 49 classes (28x28 grayscale, 270,912 images) from 48 Hiragana characters and one Hiragana iteration mark.
 
 # Test Results:
 
