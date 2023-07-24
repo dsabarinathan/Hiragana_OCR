@@ -50,6 +50,7 @@ class OCR():
            
            label_name = self.label_dict[str(position)]                    
            temp["text"] = label_name
+           temp["prob"] = str(predict[0][position])
            temp["coord"] = coordinate[row]  # Xmin,Ymin,Xmax,Ymax
            
            output.append(temp)
@@ -67,8 +68,9 @@ def index():
 
     result_json={}
     result_json["result"] = results
-    return jsonify(result_json)
-
+    response =  jsonify(result_json)
+    response.headers['Content-Type'] = 'application/json; charset=utf-8'
+    return response
 if __name__ == '__main__':
     ocrAPP = OCR()
     app.run(debug=True, host='0.0.0.0')
