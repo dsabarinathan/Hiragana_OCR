@@ -50,6 +50,7 @@ class OCR():
            
            label_name = self.label_dict[str(position)]                    
            temp["text"] = label_name
+           temp["prob"] = str(predict[0][position])
            temp["coord"] = coordinate[row]  # Xmin,Ymin,Xmax,Ymax
            
            output.append(temp)
