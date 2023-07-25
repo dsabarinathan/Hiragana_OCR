@@ -87,11 +87,11 @@ if __name__ == '__main__':
     model = lightNetHOCR((64,64,1),learning_rate=0.00001)
     
 
-    filepath=path+"weights-resnet30--{epoch:02d}---val_loss-{val_loss:.4f}.h5"
+    filepath=path+"weights-lightNetHOCR--{epoch:02d}---val_loss-{val_loss:.4f}.h5"
     checkpoint = ModelCheckpoint(filepath, monitor='val_loss', verbose=1, save_best_only=True,save_weights_only=True, mode='min')
     
     reduce_lr = ReduceLROnPlateau(monitor='val_loss', mode = 'min',
                                       factor=0.1, patience=5, min_lr=0.00001, verbose=1)
     callbacks_list = [checkpoint,reduce_lr]
     
-    history=model.fit(train_images, train_labels, epochs=EPOCHS,validation_data=(test_images,test_labels),callbacks=callbacks_list,verbose=2)
+    history=model.fit(train_images, train_labels, epochs=EPOCHS,validation_data=(test_images,test_labels),callbacks=callbacks_list,verbose=1)
