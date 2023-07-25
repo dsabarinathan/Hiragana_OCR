@@ -1,10 +1,27 @@
 # Hiragana_OCR
 
-
 This GitHub branch contains the Hiragana OCR module, which is a crucial component of our larger Japanese Character Recognition project. The main objective of this branch is to accurately recognize and convert handwritten or printed Hiragana characters into digital text format. 
+
+# Environment
+
+1. Python 3.9.12
+2. Anaconda 5.0.1
+3. Ubuntu 16.04 or Windows10
+
 # Dataset:
 [Kuzushiji-49](https://github.com/rois-codh/kmnist) is an MNIST-like dataset that has 49 classes (28x28 grayscale, 270,912 images) from 48 Hiragana characters and one Hiragana iteration mark.
 
+# Install the requirement packages:
+
+```
+pip install -r requirements.txt
+
+```
+# Training the model:
+
+```
+python train --train_images="dataset/k49-train-imgs.npz" --train_labels="dataset/k49-train-labels.npz" --test_images="dataset/k49-test-imgs.npz" --test_labels="dataset/k49-test-labels.npz"
+```
 # Test Results:
 
 | class | precision | recall | f1_score | support |
